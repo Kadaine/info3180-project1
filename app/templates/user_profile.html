@@ -4,18 +4,18 @@
 
 {% include 'flash_messages.html' %}
   
-  <div class= "gridview">
+  <div class = "layout border-style">
       
           {% for image_name in image_names %}
               {% if user.photo_name == image_name %}
               <div class = "card">    
                 <div>
                   <div>
-                      <div>
+                      <div class="leftmove">
                           <img src="{{url_for('static', filename='uploads/'+image_name)}}" alt="user photo" class="userimg">
                       </div>
                       <div>
-                          <div>
+                          <div class:"cen">
                             <h2>{{ user.first_name }} {{ user.last_name }}</h2>
                           </div>
                             <hr>
@@ -30,9 +30,9 @@
                             <h3>About me</h3>
                             <p>{{ user.biography }}</p>
                         </div>
-                        <div class=>
-                            <button>Send Message</button>
-                            <button>Follow</button>
+                        <div class="tocenter">
+                            <button class="btn btn-success btn-sm">Send Message</button>
+                            <button class="btn btn-primary btn-sm">Follow</button>
                         </div>
                     </div>
                 </div>
